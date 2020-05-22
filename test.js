@@ -20,5 +20,5 @@ app.post('/reg',(req,res)=>{
 })
 
 app.listen(3000,()=>{
-    console.log('server start');
+    console.log('server start11133333');
 })
