@@ -19,6 +19,6 @@ app.post('/reg',(req,res)=>{
     res.send({err : 1,data : req.body,method : 'post'});
 })
 
-app.listen(3000,()=>{
+app.listen(80,()=>{
     console.log('server start');
 })
