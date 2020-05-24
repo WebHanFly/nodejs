@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-let url = 'mongodb://127.0.0.1:27017/local'
+let url = 'mongodb://127.0.0.1:27017/admin'
 mongoose.connect(url,{
   user : 'root',
   pass : 'liuxiaoma123',
