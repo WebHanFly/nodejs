@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+</head>
+<body>
+    <h1>user</h1>
+    <button id = 'btn'>查询</button>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    console.log(location.href);
+    $.post('/users/reg',{name : 'xiaoma',age :16,sex : '男'},function(res){
+        console.log(res);
+    })
+    $('#btn').on('click',function(){
+        $.post('/users/login',{name : 'xiaoma'},function(res){
+            console.log(res);
+        })
+    })
+</script>
+</html>
