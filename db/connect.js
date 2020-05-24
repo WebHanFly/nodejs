@@ -3,8 +3,8 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/local',{
   user : 'root',
   pass : 'liuxiaoma123',
-  // useNewUrlParser:true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useNewUrlParser: true
 });
 
 // mongoose.connect('mongodb://localhost/local');
