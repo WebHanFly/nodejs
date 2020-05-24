@@ -7,7 +7,7 @@ var logger = require('morgan');
 var ejs = require('ejs');  //我是新引入的ejs插件
 
 const bodyParser = require("body-parser");
-const db = require('./db/connnect');
+const db = require('./db/connect');
 
 
 
