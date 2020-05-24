@@ -1,5 +1,9 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/local');
+let url = 'mongodb://127.0.0.1:27017/local'
+mongoose.connect(url,{
+  user : 'root',
+  pass : 'liuxiaoma123'
+});
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
