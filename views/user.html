@@ -13,9 +13,9 @@
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script>
     console.log(location.href);
-    $.post('/users/reg',{name : 'xiaoma',age :16,sex : '男'},function(res){
-        console.log(res);
-    })
+    // $.post('/users/reg',{name : 'xiaoma',age :16,sex : '男'},function(res){
+    //     console.log(res);
+    // })
     $('#btn').on('click',function(){
         $.post('/users/login',{name : 'xiaoma'},function(res){
             console.log(res);
