@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "app",
   "version": "0.0.0",
   "private": true,
@@ -7,6 +8,51 @@
     "startNode" : "node ./bin/www"
   },
   "dependencies": {
+=======
+  "name": "webpack1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "reactdev": "webpack-dev-server --open --env",
+    "build": "webpack --env.NODE_ENV=local --env.production",
+    "start": "nodemon ./bin/www",
+    "startNode" : "node ./bin/www",
+    "dev" : "concurrently \"npm run reactdev\" \"npm run start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "autoprefixer": "^9.7.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-modules-local-by-default": "^3.0.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-hot-loader": "^4.12.19",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+>>>>>>> new
     "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -17,5 +63,15 @@
     "mongoose": "^5.9.15",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.4"
+<<<<<<< HEAD
+=======
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-plugin-import": "^1.13.0",
+    "babel-preset-env": "^1.7.0",
+    "concurrently": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+>>>>>>> new
   }
 }

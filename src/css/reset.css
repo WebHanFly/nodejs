@@ -1,0 +1,77 @@
+@charset "UTF-8";
+html {
+	overflow-x: auto;
+	overflow-y: auto;
+	 }
+body{
+	line-height: 1.42857;
+	font-size: 14px;
+	font-family: "Microsoft YaHei",Helvetica,Georgia,Arial,sans-serif;
+	background: #f6f6f6;
+}
+input,button {
+	line-height: inherit;
+}
+body,dl,dd,dt,ul,li,input,p,th,td,form,ol,blockquote {
+	font-weight: 400;
+	margin:0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+	padding: 0;
+}
+img {
+	display: inline-block;
+	border: 0 none;
+}
+a{
+	background: transparent;
+	text-decoration: none;
+}
+a:active,a:hover{outline: 0;}
+ul,li {
+	list-style: none;
+}
+input, textarea, img, video, object {
+	box-sizing: border-box;
+	-ms-box-sizing:border-box;
+}
+
+
+
+
+
+.clearfix {zoom:1;}
+.clearfix:after,.clearfix:before{
+	display: table;
+	content: "";
+
+}
+.clearfix:after {
+	clear: both;
+}
+.pos-abs{
+	position: absolute;	
+}
+.bfs{
+	overflow: hidden;
+}
+
+a{
+	color: #0084ff;
+	text-decoration: none;
+}
+a:hover{
+	background: url($imgIp+'/images/line.svg') repeat-x 0 100%;
+	background-size: 20px auto;
+	animation: waveMove 1s infinite linear;
+}
+@keyframes waveMove {
+	0% {
+		background-position: 0 100%;
+	}
+	100% {
+		background-position: -20px 100%;
+	}
+}

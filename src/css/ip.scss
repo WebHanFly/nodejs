@@ -1,0 +1,21 @@
+$imgIp: 'http://127.0.0.1:80';
+a{
+    color: #0084ff;
+    text-decoration: none;
+    svg{
+        color: #000;
+    }
+}
+a:hover{
+    background: url($imgIp+'/images/line.svg') repeat-x 0 100%;
+    background-size: 20px auto;
+    animation: waveMove 1s infinite linear;
+}
+@keyframes waveMove {
+    0% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: -20px 100%;
+    }
+}
