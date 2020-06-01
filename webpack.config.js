@@ -96,7 +96,7 @@ module.exports = env => {
                 ], //不用删除
         }),
         new HtmlWebpackPlugin({
-            template : './public/index.html'
+            template : './bin/index.html'
         }),
         new webpack.IgnorePlugin(/\.\/local/,/moment/)//忽略moment中一个包；
     ]
