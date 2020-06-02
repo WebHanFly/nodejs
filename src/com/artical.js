@@ -4,6 +4,7 @@ import {
     Link
   } from "react-router-dom";
   import home from '../css/home.scss';
+  import {PORTIP} from './appdata';
 
 function Artical() {
 // 声明一个叫 “count” 的 state 变量。
@@ -14,8 +15,9 @@ const [data, setData] = useState([]);
 //请求后台数据
 useEffect(() => {
   const fetchData = async () => {
+    let port = location.href.indexOf('3000') > -1 ? 'http://localhost:80' : '';
     const result = await axios.post(
-      'http://localhost/users/login',
+      port + '/users/login',
       {name : 'xiaoma'}
     );
     setData(result.data.data);
