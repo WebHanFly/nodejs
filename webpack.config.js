@@ -20,14 +20,17 @@ module.exports = env => {
         './src/index.js','./src/vendors.js'],
     output : {
         filename: 'js/[name].js',
-        path : path.resolve(__dirname,'dist')
+        path : path.resolve(__dirname,'public/dist'),
+        publicPath : devMode ?  '' : 'dist/'
+        // publicPath : '/dist/'
     },
     devServer : {
         port : 3000,
         open : true,
-        contentBase : 'dist',
+        contentBase : 'public/dist',
         hot : true,
         hotOnly : true,
+        // publicPath:'/dist/'
     },
     optimization : {
         minimizer :[
@@ -81,6 +84,7 @@ module.exports = env => {
         new MiniCssExtractPlugin({
             filename: devMode ? '[name].css' : 'css/[name].[hash].css',
             chunkFilename: devMode ? '[id].css' : 'css/[id].[hash].css',
+            // publicPath : '/dist/'
           }),
         new webpack.DllReferencePlugin({
             //引用动态链接库，先生成的react的文件,找不到在去打包react文件。

@@ -34,7 +34,7 @@ router.post('/login',(req,res)=>{
 /* GET users listing. */
 router.get('/:id', function(req, res, next) {
   let {id} = req.params;
-  console.log(id,req.params);
+  res.type('html')
   res.render('user', { title: 'Express' });
 });
 
