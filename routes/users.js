@@ -24,7 +24,6 @@ router.post('/login',(req,res)=>{
     // sex :sex,
     // age : age
    }).then((result)=>{
-     console.log(result);
       res.send({err : 1 , msg : '查询OK',data : result})      
    }).catch((err)=>{
       res.send({err : 1 , msg : '查询fail',data : err})      
