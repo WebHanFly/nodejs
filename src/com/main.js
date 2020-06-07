@@ -9,6 +9,7 @@ import {
   } from "react-router-dom";
 import Home from './home';
 import Artical from './artical';
+import Manage from './manage';
 
 class App extends React.Component{
     render(){
@@ -18,6 +19,9 @@ class App extends React.Component{
               <Switch>
                 <Route path="/artical">
                   <Artical />
+                </Route>
+                <Route path="/manage">
+                  <Manage />
                 </Route>
                 <Route path="/">
                   <Home />

@@ -6,18 +6,24 @@ import {
   import home from '../css/home.scss';
   import {PORTIP} from './appdata';
 
+  //获取数据
 const fetchData = async (setData,endURL) => {
     let port = location.href.indexOf('3000') > -1 ? 'http://localhost:80' : '';
     const result = await axios.post(
       port + endURL,
       {name : 'xiaoma'}
-    ).catch((err)=>{
+    ).then((result)=>{
+      if(result.data){
+        setData(result.data.data);
+      }
+    }).catch((err)=>{
       console.log(err);
-      setData([{name : 'test'}]);
+      setData([{name : '暂无数据！'}]);
+      return;
     });
-    setData(result.data.data);
+   
   };
-
+//增加li点击事件
 const handleclick = (index,setLiActive,setData)=>{
     setLiActive(index);
     if(index == 1){
@@ -46,7 +52,7 @@ return (
   <div>
     <div className={home.ulwrap}>
       <ul>
-        <li onClick={()=>{handleclick(1,setLiActive,setData)}} className={liactive == 1 ?  home.active : ''}>文章</li>
+        <li onClick={()=>{handleclick(1,setLiActive,setData)}} className={liactive == 1 ?  home.active : ''}>文章1</li>
         <li onClick={()=>{handleclick(2,setLiActive,setData)}} className={liactive == 2 ?  home.active : ''}>作品</li>
         <li onClick={()=>{handleclick(3,setLiActive,setData)}} className={liactive == 3 ?  home.active : ''}>历程</li>
         <li onClick={()=>{handleclick(4,setLiActive,setData)}} className={liactive == 4 ?  home.active : ''}>资料</li>
@@ -55,7 +61,7 @@ return (
     <ul>
         {data.map(item => (
                 <li key={item._id}>
-                <Link to={'/artical'}>{item.name}</Link>
+                {item.name.indexOf('暂无数据') > -1 ? <span>{item.name}</span> : <Link to={'/artical'}>{item.name}</Link>}
                 </li>
              ))}
         </ul>

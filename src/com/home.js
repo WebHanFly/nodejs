@@ -59,6 +59,9 @@ console.log(PORTIP)
             <Artical />
          </div>
        </div>
+       <div>
+        <Link to={'/manage'}>管理后台</Link>
+       </div>
     </div>
   );
 }
