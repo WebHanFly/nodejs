@@ -86,6 +86,21 @@ const btncommit = (name,author,imgurl,tags,date,info,url) =>{
 }
 
 
+function testFetch(testFun,endURL){
+  console.log(port + endURL);
+  console.log(333333)
+  const result =  axios.post(
+    port + endURL,
+    {name : 'xiaoma'}
+  ).then((result)=>{
+      console.log(result,result.data.data)
+      testFun(result.data.data);
+  }).catch((err)=>{
+    console.log(err);
+    return;
+  });
+}
+
 function Manage() {
 
  // 声明一个新的叫做 “count” 的 state 变量
@@ -93,6 +108,16 @@ const [data, setData] = useState([]);
 useEffect(() => {
     fetchData(setData,'/works/Worksget');
   }, [])
+
+
+
+const[test,testFun] = useState([]);
+useEffect(() => {
+  console.log(22222222)
+  testFetch(testFun,'/users/login');
+}, []);
+
+
 
 const[liactive,setLiActive] = useState(1);
 
@@ -103,6 +128,8 @@ const[tags,settags] = useState('');
 const[date,setdate] = useState('');
 const[info,setinfo] = useState('');
 const[url,seturl] = useState('');
+
+
 
 
 return (
@@ -141,6 +168,11 @@ return (
     </div>
     <div className="btn"><button onClick={()=>{btncommit(name,author,imgurl,tags,date,info,url)}}>提交</button></div>
     <Link to={'/'}>返回首页</Link>
+    {test.map(item => (
+                <li key={item._id}>
+                <span>{item.name}</span>
+                </li>
+             ))}
   </div>
 );
 }
