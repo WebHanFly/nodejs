@@ -6,13 +6,13 @@ import {
   import {PORTIP} from './appdata';
 import home from '../css/home.scss';
 import Artical from './artical'
-import {
-  PhoneOutlined,
-  QqOutlined,
-  GithubOutlined,
-  ZhihuOutlined,
-  WeiboCircleOutlined
-} from '@ant-design/icons';
+// import {
+//   PhoneOutlined,
+//   QqOutlined,
+//   GithubOutlined,
+//   ZhihuOutlined,
+//   WeiboCircleOutlined
+// } from '@ant-design/icons';
 
 function Home() {
 console.log(PORTIP)
@@ -40,11 +40,11 @@ console.log(PORTIP)
                    <div><span className={home.sp1}>个人简介</span><span className="sp2">热爱游戏、旅行、摄影、跑步、极客、完美主义者</span></div>
                    <div><span className={home.sp1}>联系我</span>
                    <span className="sp2">
-                    <span ><PhoneOutlined /> 18616545537</span>
-                    <span className={home.mleft} ><QqOutlined /> 670567137</span>
-                    <a  className={home.mleft} href="https://github.com/WebHanFly" target="_blank"><GithubOutlined /> github</a>
-                    <a  className={home.mleft} href="https://www.zhihu.com/people/liu-liu-liu-xiao-ma" target="_blank"><ZhihuOutlined /> 知乎</a>
-                    <a  className={home.mleft} href="https://weibo.com/u/3287740781/home" target="_blank"><WeiboCircleOutlined /> 微博</a>
+                    <span > 18616545537</span>
+                    <span className={home.mleft} > 670567137</span>
+                    <a  className={home.mleft} href="https://github.com/WebHanFly" target="_blank">github</a>
+                    <a  className={home.mleft} href="https://www.zhihu.com/people/liu-liu-liu-xiao-ma" target="_blank">知乎</a>
+                    <a  className={home.mleft} href="https://weibo.com/u/3287740781/home" target="_blank">微博</a>
                    </span>
                    </div>
                  </div>

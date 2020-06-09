@@ -59,5 +59,12 @@ router.post('/Worksfixed', function(req, res, next) {
     })
   });
 
+  /* GET users listing. */
+router.get('/:id', function(req, res, next) {
+  let {id} = req.params;
+  res.type('html')
+  res.render('works', { title: 'Express' });
+});
+
 
 module.exports = router;
